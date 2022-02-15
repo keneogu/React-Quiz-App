@@ -10,3 +10,8 @@ export const handleCategoryChange = payload => ({
 	type: CHANGE_CATEGORY,
 	payload,
 });
+
+export const handleDiffcultyChange = payload => ({
+	type: CHANGE_DIFFICULTY,
+	payload,
+});
