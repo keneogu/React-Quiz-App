@@ -15,3 +15,8 @@ export const handleDiffcultyChange = payload => ({
 	type: CHANGE_DIFFICULTY,
 	payload,
 });
+
+export const handleTypeChange = payload => ({
+	type: CHANGE_TYPE,
+	payload,
+});
