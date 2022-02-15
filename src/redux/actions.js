@@ -20,3 +20,8 @@ export const handleTypeChange = payload => ({
 	type: CHANGE_TYPE,
 	payload,
 });
+
+export const handleAmountChange = payload => ({
+	type: CHANGE_AMOUNT,
+	payload,
+});
