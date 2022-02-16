@@ -5,6 +5,7 @@ const initialState = {
 	question_difficulty: "",
 	question_type: "",
 	amount_of_question: 50,
+	score: 0,
 }
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +29,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				amount_of_question: action.payload,
+			}
+		case CHANGE_SCORE:
+			return {
+				...state,
+				score: action.payload,
 			}
 		default:
 			return state;
