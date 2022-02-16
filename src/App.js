@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
 import Settings from './pages/Settings';
 import Questions from './pages/Questions';
 import FinalScore from './pages/FinalScore';
