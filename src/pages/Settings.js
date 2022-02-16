@@ -1,12 +1,14 @@
-import { Box, Button, CircularProgress, Typography } from '@mui/material';
-import React from 'react'
+import { Button, CircularProgress, Typography } from '@mui/material';
+import { Box } from "@mui/system";
 import SelectField from "../components/SelectField";
 import TextFieldBar from "../components/TextFieldBar";
 import useAxios from "../common/useAxios";
+import { useNavigate } from 'react-router-dom';
 
 
 const Settings = () => {
 	const {response,error,loading} = useAxios({url: "/api_category.php"})
+	const navigate = useNavigate();
 	
 	if(loading) {
 		return (
@@ -28,15 +30,16 @@ const Settings = () => {
 		{id: "easy", name: "Easy"},
 		{id: "medium", name: "Medium"},
 		{id: "hard", name: "Hard"},
-	]
+	];
 
 	const typeOptions = [
 		{id: "multiple", name: "Multiple Choice"},
 		{id: "boolean", name: "True/False"},
-	]
+	];
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		navigate("./questions")
 	};
 
 	return (
@@ -51,7 +54,7 @@ const Settings = () => {
 				</Button>
 			</Box>
 		</form>
-	)
-}
+	);
+};
 
-export default Settings
+export default Settings;
