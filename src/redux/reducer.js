@@ -4,6 +4,7 @@ const initialState = {
 	question_category: "",
 	question_difficulty: "",
 	question_type: "",
+	amount_of_question: 50,
 }
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				question_type: action.payload,
+			}
+		case CHANGE_AMOUNT:
+			return {
+				...state,
+				amount_of_question: action.payload,
 			}
 		default:
 			return state;
