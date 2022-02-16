@@ -3,6 +3,7 @@ import { CHANGE_AMOUNT, CHANGE_CATEGORY, CHANGE_DIFFICULTY, CHANGE_SCORE, CHANGE
 const initialState = {
 	question_category: "",
 	question_difficulty: "",
+	question_type: "",
 }
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				question_difficulty: action.payload,
+			}
+		case CHANGE_TYPE:
+			return {
+				...state,
+				question_type: action.payload,
 			}
 		default:
 			return state;
