@@ -18,7 +18,7 @@ const useAxios = ({ url }) => {
 		}
 		fetchData();
 	}, [url]);
-	return { response, error, loading}
+	return { response, error, loading }
 }
 
-export default useAxios
+export default useAxios;
