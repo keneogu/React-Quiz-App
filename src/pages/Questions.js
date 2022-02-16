@@ -78,7 +78,7 @@ const Questions = () => {
 			</Typography>
 			{options.map((data, id) => (
 				<Box mt={2} key={id}>
-					<Button variant="contained" onClick={handleClick}>{decode(data)}</Button>
+					<Button variant="contained" color="success" onClick={handleClick}>{decode(data)}</Button>
 				</Box>
 			))}
 				<Box mt={5}>Score: {score} / {response.results.length}</Box>

@@ -43,17 +43,20 @@ const Settings = () => {
 	};
 
 	return (
+		<Box>
+		<Typography variant="h3" mt={2}>React Quiz App</Typography>
 		<form onSubmit={handleSubmit}>
 			<SelectField options={response.trivia_categories} label="Category" />
 			<SelectField options={difficultyOptions} label="Difficulty" />
 			<SelectField options={typeOptions} label="Type" />
 			<TextFieldBar />
 			<Box mt={3} width="100%">
-				<Button fullWidth variant="contained" type="submit">
+				<Button fullWidth variant="contained" color="success" type="submit">
 					Get Started
 				</Button>
 			</Box>
 		</form>
+		</Box>
 	);
 };
 

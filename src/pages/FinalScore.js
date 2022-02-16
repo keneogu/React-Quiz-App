@@ -18,7 +18,7 @@ const FinalScore = () => {
 	return (
 		<Box mt={30}>
 			<Typography variant="h3" fontWeight="bold" mb={3}>Final Score {score}</Typography>
-			<Button variant="outline" onClick={handleClick}>back to settings!</Button>
+			<Button variant="outline" color="success" onClick={handleClick}>back to settings!</Button>
 		</Box>
 	)
 }
